@@ -64,12 +64,12 @@ p.lead {
     text-align: center;
     font-size: 1.5rem;
     line-height: 3.0rem;
-    margin-right: 1.5rem;
+    margin-right: 1.0rem;
     &:last-child {
       margin-right: 0;
     }
     &:hover {
-      background-color: $primary;
+      background-color: $diff;
     }
   }
 }
@@ -78,7 +78,7 @@ p.lead {
   font-size: 3rem;
   .list-inline-item i {
     &:hover {
-      color: $primary;
+      color: $diff;
     }
   }
 }

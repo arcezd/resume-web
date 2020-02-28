@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { faLinkedinIn, faGithub, faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 
 import Typed from 'typed.js';
 
@@ -15,13 +16,14 @@ export class AboutComponent implements OnInit {
   faGithub = faGithub;
   faTwitter = faTwitter;
   faFacebookF = faFacebookF;
+  faFileDownload = faFileDownload;
 
   constructor() { }
 
   ngOnInit() {
     // Typed JS Options
     const options = {
-      strings: ["Sr Software Developer", "iOS Developer", "DevOps Engineer", "Geek", "Hobby drone pilot"],
+      strings: ["Sr Software Developer", "iOS Developer", "DevOps Engineer", "AWS Certified Developer", "Geek", "Hobby drone pilot"],
       loop: true,
       typeSpeed: 60,
       backSpeed: 30,
