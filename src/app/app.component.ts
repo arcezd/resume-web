@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
-
-import { faLinkedin, faGithub, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { fadeAnimation } from './animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [fadeAnimation] // register the animation
 })
 export class AppComponent {
   title = 'resume-web';
-
-  faLinkedin = faLinkedin;
-  faGithub = faGithub;
-  faTwitter = faTwitter;
-  faFacebook = faFacebook;
 }
