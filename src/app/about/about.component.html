@@ -1,7 +1,7 @@
 <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
   <div class="w-100">
-    <h1 class="mb-0">Diego
-      <span class="text-primary">Arce</span>
+    <h1 class="mb-0" *ngIf="(profile$ | async)?.info as info">{{ info.firstname }}
+      <span class="text-primary">Doe</span>
     </h1>
     <div class="subheading mb-5">I'm a <span></span></div>
     <!--<div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
@@ -29,3 +29,10 @@
     </div>
   </div>
 </section>
+<footer id="aws-footer" class="footer py-4 text-white-50">
+  <div class="container text-right">
+    <a href="https://www.certmetrics.com/amazon/public/badge.aspx?t=c&d=2020-02-24&i=2&ci=AWS00574746" target="_blank">
+      <img src="https://www.certmetrics.com/api/ob/image/amazon/c/2" alt="AWS Certified Developer - Associate" title="AWS Certified Developer - Associate">
+    </a>
+  </div>
+</footer>

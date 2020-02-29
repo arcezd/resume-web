@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Observable } from 'rxjs';
+import { share } from 'rxjs/operators';
+
 import { faLinkedinIn, faGithub, faTwitter, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
+
+import { ProfileService } from '../profile/profile.service';
+import { UserProfile } from '../profile/user-profile';
 
 import Typed from 'typed.js';
 
@@ -18,9 +24,18 @@ export class AboutComponent implements OnInit {
   faFacebookF = faFacebookF;
   faFileDownload = faFileDownload;
 
-  constructor() { }
+  public profile$: Observable<UserProfile>;
+
+  constructor(
+    public profileService: ProfileService
+  ) { }
 
   ngOnInit() {
+    this.loadUserProfile();
+    this.loadTypedText();
+  }
+
+  loadTypedText() {
     // Typed JS Options
     const options = {
       strings: ["Sr Software Developer", "iOS Developer", "DevOps Engineer", "AWS Certified Developer", "Geek", "Hobby drone pilot"],
@@ -31,6 +46,10 @@ export class AboutComponent implements OnInit {
       backDelay: 3e3
     };
     const typed = new Typed('.resume-section .subheading span', options); // Typed JS TRIGGER
+  }
+
+  loadUserProfile() {
+    this.profile$ = this.profileService.GetUserProfile().pipe(share());
   }
 
 }
