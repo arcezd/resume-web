@@ -20,6 +20,8 @@ import { InterestsComponent } from './interests/interests.component';
 import { AwardsComponent } from './awards/awards.component';
 import { NavBarComponent } from './layout/components/nav-bar/nav-bar.component';
 import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './layout/components/footer/footer.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AboutComponent } from './about/about.component';
     SkillsComponent,
     InterestsComponent,
     AwardsComponent,
-    NavBarComponent
+    NavBarComponent,
+    FooterComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
